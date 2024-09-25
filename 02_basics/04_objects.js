@@ -72,7 +72,7 @@ const {courseDuration:Duration} = course
 console.log(Duration);
 
 // API
-{
+/*{
     "results": [
       {
         "gender": "female",
@@ -137,4 +137,4 @@ console.log(Duration);
       "page": 1,
       "version": "1.4"
     }
-  }
+  }*/
