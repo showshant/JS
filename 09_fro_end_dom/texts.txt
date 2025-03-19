@@ -1,0 +1,22 @@
+DOM 
+Dom Manipulation
+
+Accessing Elements: 
+    document.querySelector()
+
+Modifying Elements:
+    innerHtml, textContent
+
+Manipulating Styles and Classes:
+    Styles
+    classList
+
+Creating and Deleting Elements:
+    createElement()
+    appendchild()
+    removechild()
+
+Event Handling:
+    addEventListener()
+
+even object
