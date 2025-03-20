@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event Listeners</title>
+    <style>
+        body {
+            height: 2000px; /* Added to demonstrate scroll event */
+        }
+    </style>
+</head>
+<body>
+
+    <button id="colorButton">Click Me</button>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <h2 id="displayName">Your name will appear here</h2>
+
+    <script>
+        // Qs1: Event Listeners for different events
+
+        document.addEventListener("mouseout", function () {
+            console.log("Mouse moved out of the document.");
+        });
+
+        document.addEventListener("keypress", function (event) {
+            console.log("Key pressed:", event.key);
+        });
+
+        window.addEventListener("scroll", function () {
+            console.log("Page is being scrolled.");
+        });
+
+        window.addEventListener("load", function () {
+            console.log("Page has fully loaded.");
+        });
+
+        // Qs2: Change button color on click
+        const button = document.getElementById("colorButton");
+        button.addEventListener("click", function () {
+            button.style.backgroundColor = "green";
+        });
+
+        // Qs3: Input field with only letters and spaces allowed
+        const nameInput = document.getElementById("nameInput");
+        const displayName = document.getElementById("displayName");
+
+        nameInput.addEventListener("input", function () {
+            let filteredValue = nameInput.value.replace(/[^a-zA-Z\s]/g, ""); // Remove non-letters and non-spaces
+            nameInput.value = filteredValue; 
+            displayName.textContent = filteredValue || "Your name will appear here";
+        });
+    </script>
+
+</body>
+</html>
